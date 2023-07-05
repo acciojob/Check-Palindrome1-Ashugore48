@@ -1,19 +1,14 @@
-// complete the given function
-
 function palindrome(str){
-	let Str = "";
-	for(let i = 0; i < str.length;i++){
-		if(str.charAt(i) === ' '){
-			continue;
-		}
-		Str = Str + str.charAt(i);
+    let ch="" ;
+	str=str.toLowerCase();
+	for (let i = (str.length-1); i >=0 ; i--) {
+		ch+=str[i];
+	
 	}
-	let revStr = Str.split('').reverse().join('')
-	console.log(revStr);
-	if(Str === revStr){
-	    return true;
+	if(ch==str){
+		return true;
 	}else{
-	    return false;
+		return false;
 	}
 }
 module.exports = palindrome
